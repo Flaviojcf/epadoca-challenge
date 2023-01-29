@@ -1,6 +1,8 @@
+using epadoca_challenge.Data;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
@@ -24,6 +26,8 @@ namespace epadoca_challenge
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddEntityFrameworkSqlServer()
+                .AddDbContext<BakeryDbContext>(db => db.UseSqlServer(Configuration.GetConnectionString("DataBase")));
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
