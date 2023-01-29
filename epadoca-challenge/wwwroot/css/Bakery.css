@@ -1,0 +1,150 @@
+﻿
+.Container {
+    display: flex;
+    min-height: 100vh !important;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 310px;
+}
+
+
+.containerTitle {
+    display: flex;
+    justify-content: center;
+    margin: 40px;
+}
+
+.titleBakeryPage {
+    color: #ffad02;
+}
+
+
+.bakeryContainer {
+    display: flex;
+    height: 100% !important;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 40px;
+    gap: 25px;
+}
+
+
+.cardComponent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    background: yellow;
+    max-width: 280px;
+    min-height: 210px;
+    padding: 15px 10px;
+    border-radius: 25px;
+    border: 1px solid black;
+}
+
+.infoCard {
+    margin-top: auto;
+    cursor: pointer;
+    transition: all ease 0.2s;
+}
+
+    .infoCard:hover {
+        opacity: 40%;
+    }
+
+.modal-dialog {
+    align-self: center;
+    justify-self: center;
+    margin-top: 200px;
+    
+}
+
+.btn-close {
+    border-radius: 16px;
+    border: none;
+    padding: 10px;
+    background: yellow;
+}
+    .btn-close:hover {
+        opacity: 60%;
+        box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.75);
+    }
+
+.modal-content {
+   
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-content:center;
+
+}
+
+.tableModal {
+    display: flex;
+    justify-content: space-between;
+    
+
+
+ 
+}
+
+.thead {
+    
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.tbodyModal {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+
+.containerButton {
+    display:flex;
+    width: 100%;
+    align-content:center;
+    justify-content: center;
+
+}
+
+.btn {
+    width: 300px;
+}
+.btn:hover {
+    opacity: 60%;
+}
+
+.formModal {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.divForm {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    justify-content: space-between;
+}
+
+.form-control {
+    max-width: 380px;
+    border-radius: 8px;
+}
+
+.btnForm {
+    align-self: center;
+    border: none;
+    height: 40px;
+    width: 260px;
+    border-radius: 8px;
+}
+
+@media (max-width: 475px) {
+    .form-control {
+        width: 200px !important;
+    }
+}

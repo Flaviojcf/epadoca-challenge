@@ -1,14 +1,14 @@
 ﻿/* //////////////////////////////////////////////////////       HEADER   ///////////////////////////////////////////////////// */
 
 .header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
 }
 
 .navbar {
-  border: none !important;
+    border: none !important;
 }
 
 .navbar-brand {
@@ -23,104 +23,94 @@
 
 .navbar-nav {
     display: flex;
-    align-items:center;
+    align-items: center;
     gap: 30px;
 }
 
 .nav-link {
-  transition: all ease 0.2s;
-  color: #ffad02 !important;
-  font-family: "Montserrat" sans-serif;
-  font-size: 18px;
-  font-weight: bold;
+    transition: all ease 0.2s;
+    color: #ffad02 !important;
+    font-family: "Montserrat" sans-serif;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 @media (max-width: 475px) {
-  .epadoca-logo {
-    width: 200px !important;
-    align-self: center;
-    object-fit: contain;
-  }
+    .epadoca-logo {
+        width: 200px !important;
+        align-self: center;
+        object-fit: contain;
+    }
 
-  a.navbar-brand {
-    margin-right: 0px;
-  }
+    a.navbar-brand {
+        margin-right: 0px;
+    }
 }
 
 @media (max-width: 1024px) {
-  .navbar {
-    padding: 1px !important;
-  }
+    .navbar {
+        padding: 1px !important;
+    }
 
-  a.navbar-brand {
-    margin-right: 30px !important;
-  }
+    a.navbar-brand {
+        margin-right: 30px !important;
+    }
 }
 
 @media (max-width: 575px) {
-  .navbar {
-    padding: 20px !important;
-  }
+    .navbar {
+        padding: 20px !important;
+    }
 
-  .nav-item {
-    display: flex;
-    flex-direction: column;
-    width: 100% !important;
+    .nav-item {
+        display: flex;
+        flex-direction: column;
+        width: 100% !important;
+        align-self: center;
+    }
 
-    align-self: center;
-  }
+        .nav-item:hover {
+            background: black;
+        }
 
-  .nav-item:hover {
-    background: black;
-  }
-
-  .nav-link {
-    align-self: center !important;
-  }
+    .nav-link {
+        align-self: center !important;
+    }
 }
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */
 
 /* //////////////////////////////////////////////////////       MAIN   ///////////////////////////////////////////////////// */
 
 .main {
-  display: flex;
-  flex-direction: column;
-  margin-top: 98px;
-  min-height: 100vh !important;
-  background: #E9ECEF;
-
-
- 
+    display: flex;
+    flex-direction: column;
+    margin-top: 98px;
+    min-height: 100%;
 }
 
 .cotainerFlexColumn {
-  display: flex;
-  min-height: 100vh !important; 
-
-  flex-direction: column;
-  
-  gap: 20px;
+    display: flex;
+    min-height: 100vh !important;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .containerFlexRow {
     display: flex;
-
 }
 
 .firstContainer {
     display: flex;
     flex-direction: column;
-  height: 100vh;
-  width: 100% !important;
-  padding: 80px 200px;
-
-
+    height: 100vh;
+    width: 100% !important;
+    padding: 80px 200px;
 }
 
 .title {
-    display :flex;
+    display: flex;
     flex-direction: column;
-    font-size:47px;
+    font-size: 47px;
     margin-bottom: 40px;
 }
 
@@ -129,17 +119,16 @@
 }
 
 .paragraph {
-    display :flex;
+    display: flex;
     flex-direction: column;
     gap: 60px;
-
     font-size: 22px;
     font-weight: 400;
     text-shadow: 0px 0px 10px rgb(21 4 4 / 15%);
 }
 
-.strongColor { 
-  color: #ffad02;
+.strongColor {
+    color: #ffad02;
 }
 
 
@@ -153,107 +142,98 @@
 .containerImage {
     display: flex;
     flex-direction: column;
-    align-items:center;
-    justify-items:center;
-
+    align-items: center;
+    justify-items: center;
     width: 100%;
-    
 }
 
 .image {
     width: 100%;
     height: 100%;
     object-fit: contain;
-  
 }
 
 .divButton {
-   
     text-align: center;
     margin-top: 25%;
     max-width: 250px;
     padding: 15px;
-
     border-radius: 25px;
     background-color: #FFAD02;
     transition: all ease 0.2s;
 }
-.divButton:hover {
-  background: black;
-}
+
+    .divButton:hover {
+        background: black;
+    }
 
 .contactInButton {
-  display: inline-block;
-  height: 100%;
-  width: 100%;
-  text-decoration: none;
-  color: white;
-  font-size: 22px;
-  font-weight: 700;
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    color: white;
+    font-size: 22px;
+    font-weight: 700;
 }
 
-.contactInButton:hover {
-  text-decoration: none;
-  color: white;
-}
+    .contactInButton:hover {
+        text-decoration: none;
+        color: white;
+    }
 
 .orangeSection {
-  display: flex;
-  flex-wrap: wrap;
-  margin-bottom: 180px;
-  width: 100%;
-
-  align-items: center;
-  justify-content: space-between;
-
-  min-height: 200px;
-  padding: 10px 170px;
-  background: #FFAD00;
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 180px;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    min-height: 200px;
+    padding: 10px 170px;
+    background: #FFAD00;
 }
 
 .imgContainer {
-  display: flex;
-  align-items: center;
-  flex-direction: column;
-  gap: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .imgOrangeSecion {
-  max-width: 89px;
-  max-height: 89px;
+    max-width: 89px;
+    max-height: 89px;
 }
 
 .imgDescription {
-  color: black;
-  font-size: 21px;
+    color: black;
+    font-size: 21px;
 }
 
 @media (max-width: 1024px) {
 
-  .containerImage{
-    margin-top: -200px;
-  }
-  
-  .image {
-    max-width: 378px;
- 
-  
-  }
+    .containerImage {
+        margin-top: -200px;
+    }
+
+    .image {
+        max-width: 378px;
+    }
+
     .containerFlexRow {
         flex-direction: column;
-       
     }
-    
-  .firstContainer, .title {
 
-    padding: 20px;
-    text-align:center;
-    align-items: center;
-  }
+    .firstContainer, .title {
+        padding: 20px;
+        text-align: center;
+        align-items: center;
+    }
 
-  .divButton {
-    margin-top: 10px;
-  }
+    .divButton {
+        margin-top: 10px;
+    }
 
     .orangeSection {
         padding: 10px 40px;
@@ -263,19 +243,18 @@
 
 
 @media (max-width: 475px) {
-  .containerImage {
-    margin-top: -40px;
-    align-items: center;
-    
-  }
+    .containerImage {
+        margin-top: -40px;
+        align-items: center;
+    }
 
-  .paragraph {
-    gap: 30px;
-  }
+    .paragraph {
+        gap: 30px;
+    }
 
-  .orangeSection { 
-    justify-content: center;
-  }
+    .orangeSection {
+        justify-content: center;
+    }
 }
 
 /* /////////////////////////////////////////////////////////////////////////////////////////////////////////// */

@@ -56,11 +56,14 @@ button.accept-policy {
 html {
   position: relative;
   min-height: 100%;
+
 }
 
 body {
-  /* Margin bottom by footer height */
-  margin-bottom: 60px;
+    /* Margin bottom by footer height */
+    margin-bottom: 60px;
+    background: #E9ECEF;
+    height: 100%;
 }
 
 .floatingWhatsapp {
@@ -79,6 +82,8 @@ body {
     white-space: nowrap;
     line-height: 60px; /* Vertically center the text there */
     background: black;
+
+
 }
 
 .containerFooter {
@@ -118,7 +123,6 @@ body {
         align-items:center;
         text-align: center;
         justify-content: center;
-        border: 1px solid red;
     }
 
     .floatingWhatsapp {

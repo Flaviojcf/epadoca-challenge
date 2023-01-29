@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="~/css/site.css" />
     <link rel="stylesheet" href="~/css/Home.css" />
+    <link rel="stylesheet" href="~/css/Bakery.css" />
     <link rel="stylesheet" href="~/img/" />
 </head>
 <body>
@@ -41,47 +42,48 @@
     <div class="main ">
         <div class="floatingWhatsapp">
             <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511970705217&text=Ol%C3%A1%20Wendell%2C%20gostaria%20de%20contratar%20o%20Epadoca.com%20para%20minha%20padaria."
-               target="_blank"><img class="whatsappImage w-50 h-50" src="~/img/wpp-1.png"/> </a>
+               target="_blank"><img class="whatsappImage w-50 h-50" src="~/img/wpp-1.png" /> </a>
         </div>
         <main role="main">
             @RenderBody()
         </main>
     </div>
+</body>
 
 
 
-    <footer class="border-top footer text-muted">
-        <div class="containerFooter">
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script src="~/js/site.js" asp-append-version="true"></script>
+@await RenderSectionAsync("Scripts", required: false)
 
-            <div class="epadocaPlataform">
-                <img class="epadoca-logo" src="~/img/epadoca-logotipo.png" alt="epadoca-logo" />
-                <p class="$white ">
-                    A melhor plataforma digital para Padarias.
-                </p>
+</html>
+<footer class="footer">
+    <div class="containerFooter">
 
-            </div>
-
-
-            <div class="social d-flex flex-column">
-                <p class="$white">
-                    Acompanhe nas redes
-                </p>
-                <div class="socialContainer  d-flex">
-                    <a href="https://www.linkedin.com/in/flávio-jcosta" target="_blank"> <img class="socialImage" src="~/img/linkedin-logo.png" /> </a>
-                    <a href="https://github.com/Flaviojcf" target="_blank"> <img class="socialImage" src="~/img/github-logo.png" /> </a>
-                    <a href="mailto:flaviojcostafilho@gmail.com?subject=VagaDeEstagio&body=Ola%0D%0A%0D%0AFlavio,%0D%0A%0D%0AEquipe Epadoca"> <img class="socialImage" src="~/img/gmail.png" /> </a>
-
-                </div>
-            </div>
-
-
+        <div class="epadocaPlataform">
+            <img class="epadoca-logo" src="~/img/epadoca-logotipo.png" alt="epadoca-logo" />
+            <p class="text-white ">
+                A melhor plataforma digital para Padarias.
+            </p>
 
         </div>
 
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
-</body>
-</html>
+
+        <div class="social d-flex flex-column">
+            <p class="text-white">
+                Acompanhe nas redes
+            </p>
+            <div class="socialContainer  d-flex">
+                <a href="https://www.linkedin.com/in/flávio-jcosta" target="_blank"> <img class="socialImage" src="~/img/linkedin-logo.png" /> </a>
+                <a href="https://github.com/Flaviojcf" target="_blank"> <img class="socialImage" src="~/img/github-logo.png" /> </a>
+                <a href="mailto:flaviojcostafilho@gmail.com?subject=VagaDeEstagio&body=Ola%0D%0A%0D%0AFlavio,%0D%0A%0D%0AEquipe Epadoca"> <img class="socialImage" src="~/img/gmail.png" /> </a>
+
+            </div>
+        </div>
+
+
+
+    </div>
+
+</footer>
