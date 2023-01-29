@@ -16,8 +16,9 @@
 }
 
 .epadoca-logo {
-  width: 300px !important;
-  height: 69.72px !important;
+    width: 300px !important;
+    height: 69.72px !important;
+    object-fit: contain;
 }
 
 .navbar-nav {
@@ -37,6 +38,7 @@
 @media (max-width: 475px) {
   .epadoca-logo {
     width: 200px !important;
+    align-self: center;
     object-fit: contain;
   }
 
@@ -170,7 +172,6 @@
     text-align: center;
     margin-top: 25%;
     max-width: 250px;
-    max-heigth: 22px;
     padding: 15px;
 
     border-radius: 25px;
@@ -199,6 +200,8 @@
 .orangeSection {
   display: flex;
   flex-wrap: wrap;
+  margin-bottom: 180px;
+  width: 100%;
 
   align-items: center;
   justify-content: space-between;
@@ -252,9 +255,10 @@
     margin-top: 10px;
   }
 
-  .orangeSection {
-    padding: 10px 40px;
-  }
+    .orangeSection {
+        padding: 10px 40px;
+        margin-bottom: 240px;
+    }
 }
 
 

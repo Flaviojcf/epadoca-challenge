@@ -15,7 +15,7 @@
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
             <div class="container">
                 <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">
-                    <img class ="epadoca-logo"  src="~/img/logo-epadoca.png" alt="epadoca-logo" />
+                    <img class="epadoca-logo" src="~/img/logo-epadoca.png" alt="epadoca-logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
@@ -24,10 +24,10 @@
                 <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                     <ul class="navbar-nav flex-grow-1">
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
+                            <a class="nav-link text-dark" asp-controller="Home" asp-action="Index">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="register">Faça parte</a>
+                            <a class="nav-link text-dark" asp-controller="Bakery" asp-action="Index">Faça parte</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" target="_blank" href="https://blog.epadoca.com/">Blog</a>
@@ -37,16 +37,47 @@
             </div>
         </nav>
     </header>
+
     <div class="main ">
+        <div class="floatingWhatsapp">
+            <a href="https://api.whatsapp.com/send?1=pt_BR&phone=5511970705217&text=Ol%C3%A1%20Wendell%2C%20gostaria%20de%20contratar%20o%20Epadoca.com%20para%20minha%20padaria."
+               target="_blank"><img class="whatsappImage w-50 h-50" src="~/img/wpp-1.png"/> </a>
+        </div>
         <main role="main">
             @RenderBody()
         </main>
     </div>
 
+
+
     <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2023 - epadoca_challenge - <a target="_blank" href="https://www.linkedin.com/in/fl%C3%A1vio-jcosta/">Flávio Costa</a>
+        <div class="containerFooter">
+
+            <div class="epadocaPlataform">
+                <img class="epadoca-logo" src="~/img/epadoca-logotipo.png" alt="epadoca-logo" />
+                <p class="$white ">
+                    A melhor plataforma digital para Padarias.
+                </p>
+
+            </div>
+
+
+            <div class="social d-flex flex-column">
+                <p class="$white">
+                    Acompanhe nas redes
+                </p>
+                <div class="socialContainer  d-flex">
+                    <a href="https://www.linkedin.com/in/flávio-jcosta" target="_blank"> <img class="socialImage" src="~/img/linkedin-logo.png" /> </a>
+                    <a href="https://github.com/Flaviojcf" target="_blank"> <img class="socialImage" src="~/img/github-logo.png" /> </a>
+                    <a href="mailto:flaviojcostafilho@gmail.com?subject=VagaDeEstagio&body=Ola%0D%0A%0D%0AFlavio,%0D%0A%0D%0AEquipe Epadoca"> <img class="socialImage" src="~/img/gmail.png" /> </a>
+
+                </div>
+            </div>
+
+
+
         </div>
+
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
