@@ -1,6 +1,6 @@
 ﻿
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -27,7 +27,7 @@
                             <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Início</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Faça parte</a>
+                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="register">Faça parte</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link text-dark" target="_blank" href="https://blog.epadoca.com/">Blog</a>
@@ -38,14 +38,14 @@
         </nav>
     </header>
     <div class="main ">
-        <main role="main" class="pb-3">
+        <main role="main">
             @RenderBody()
         </main>
     </div>
 
     <footer class="border-top footer text-muted">
         <div class="container">
-            &copy; 2023 - epadoca_challenge - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+            &copy; 2023 - epadoca_challenge - <a target="_blank" href="https://www.linkedin.com/in/fl%C3%A1vio-jcosta/">Flávio Costa</a>
         </div>
     </footer>
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
