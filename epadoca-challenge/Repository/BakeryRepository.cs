@@ -48,7 +48,7 @@ namespace epadoca_challenge.Repository
             {
                 return bakery;
             }
-            throw new System.Exception("Padaria já cadastrada");
+            return null;
         }
 
         public BakeryModel ListById(int id)

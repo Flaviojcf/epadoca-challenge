@@ -49,7 +49,8 @@ namespace epadoca_challenge.Controllers
                     TempData["MensagemSucesso"] = "Nova parceria realizada!";
                     return RedirectToAction("Index");
                 }
-                throw new System.Exception("Padaria já cadastrada");
+                TempData["MensagemErro"] = "Padaria já cadastrada";
+                return RedirectToAction("Index");
             }
 
             return View(bakery);
