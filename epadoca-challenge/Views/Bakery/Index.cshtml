@@ -1,61 +1,22 @@
-﻿@{
+﻿@model List<BakeryModel>
+
+@{
     ViewData["Title"] = "New Bakery Page";
 }
+
 <!--  Bakery info Modal -->
 <div id="modalBakeryInfo" class="modal" tabindex="-1">
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-header">
                 <h5 class="modal-title">Descrição da padaria</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">Sair</button>
+                <button type="button" class="btn-close" data-dismiss="modal"  aria-label="Close">Sair</button>
             </div>
             <div class="modal-body">
-                <table class="tableModal">
-                    <thead class="thead">
-                        <tr>
-                            <th scope="col">Id</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Nome</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Descrição</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Estado</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Cidade</th>
-                        </tr>
-                        <tr>
-                            <th scope="col">Rua</th>
-                        </tr>
+               
+                <div id="listBakery">
 
-                    </thead>
-                    <tbody class="tbodyModal">
-                        <tr>
-                            <th>1</th>
-                        </tr>
-                        <tr>
-                            <th>Pandany</th>
-                        </tr>
-                        <tr>
-                            <th>Fazendo sua vida ser mais doce</th>
-                        </tr>
-                        <tr>
-                            <th>PE</th>
-                        </tr>
-                        <tr>
-                            <th>OLINDA</th>
-                        </tr>
-                        <tr>
-                            <th>TEREZITA BANDEIRA</th>
-                        </tr>
-
-                    </tbody>
-
-                </table>
-
+                </div>
             </div>
         </div>
     </div>
@@ -63,45 +24,6 @@
 <!--/////////////////////////////////////////////////////////////////////-->
 
 
-<!--  New Bakery Modal -->
-<div id="newBakeryModal" class="modal" tabindex="-1">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Descrição da padaria</h5>
-                <button type="button" class="btn-close" data-dismiss="modal" aria-label="Close">Sair</button>
-            </div>
-            <div class="modal-body">
-                <form class="formModal"> 
-                    <div class="divForm mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Nome:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="divForm mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Descrição:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="divForm mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Estado:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="divForm mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Cidade:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-                    <div class="divForm mb-3">
-                        <label for="exampleInputPassword1" class="form-label">Rua:</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1">
-                    </div>
-
-                    <button type="submit" class="btnForm btn-primary">Cadastrar</button>
-                </form>
-
-            </div>
-        </div>
-    </div>
-</div>
-<!--/////////////////////////////////////////////////////////////////////-->
 
 
 
@@ -114,324 +36,23 @@
 
     <div class="bakeryContainer">
 
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
+        @if (Model != null && Model.Any())
+        {
+            foreach (BakeryModel bakery in Model)
+            {
+                <div class="cardComponent">
+                    <h1>@bakery.Name</h1>
+                    <p>@bakery.Description</p>
+                    <p class="infoCard" bakery-id="@bakery.Id"><strong>Ver mais informações</strong></p>
+                </div>
 
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
-        <div class="cardComponent">
-            <h1>Pandany</h1>
-            <p>Fazendo sua vida ser mais doce</p>
-            <p class="infoCard"><strong>Ver mais informações</strong></p>
-        </div>
-
+            }
+        }
     </div>
-
     <div class="containerButton">
-        <button type="button" class="btn btn-primary">Seja parceiro</button>
+        <a class="btn btn-primary" asp-controller="Bakery" asp-action="Create">Seja parceiro</a>
     </div>
+
 
 
 

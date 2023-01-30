@@ -56,7 +56,6 @@
     align-self: center;
     justify-self: center;
     margin-top: 200px;
-    
 }
 
 .btn-close {
@@ -65,31 +64,25 @@
     padding: 10px;
     background: yellow;
 }
+
     .btn-close:hover {
         opacity: 60%;
         box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.75);
     }
 
 .modal-content {
-   
     display: flex;
     flex-direction: column;
     text-align: center;
-    align-content:center;
-
+    align-content: center;
 }
 
 .tableModal {
     display: flex;
     justify-content: space-between;
-    
-
-
- 
 }
 
 .thead {
-    
     display: flex;
     flex-direction: column;
     gap: 30px;
@@ -103,31 +96,39 @@
 
 
 .containerButton {
-    display:flex;
+    display: flex;
     width: 100%;
-    align-content:center;
+    align-content: center;
     justify-content: center;
-
 }
 
 .btn {
     width: 300px;
 }
-.btn:hover {
-    opacity: 60%;
-}
+
+    .btn:hover {
+        opacity: 60%;
+    }
 
 .formModal {
     display: flex;
     flex-direction: column;
+    align-self: center;
+    align-content: center;
+    justify-content: center;
+    border: 1px solid black;
+    border-radius: 8px;
+    width: 100%;
+    max-width: 1200px;
     gap: 25px;
+    padding: 30px;
 }
 
 .divForm {
     display: flex;
     align-items: center;
-    justify-content: center;
     justify-content: space-between;
+    width: 100%;
 }
 
 .form-control {
@@ -143,8 +144,19 @@
     border-radius: 8px;
 }
 
+
+.containerCreate {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    padding: 20px;
+    margin-bottom: 300px;
+    margin-top: 40px;
+}
+
 @media (max-width: 475px) {
     .form-control {
-        width: 200px !important;
+        width: 140px !important;
     }
 }

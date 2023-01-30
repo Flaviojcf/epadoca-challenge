@@ -5,10 +5,16 @@
 
 $(document).ready(function () {
     $('.infoCard').click(function () {
-        $('#modalBakeryInfo').modal();
-    });
-    $('.btn').click(function () {
-        $('#newBakeryModal').modal();
+        var bakeryId = $(this).attr('bakery-id');
+
+        $.ajax({
+            type: 'GET',
+            url: '/Bakery/ListAllBakeries/' + bakeryId,
+            success: function (result) {
+                $("#listBakery").html(result);
+                $('#modalBakeryInfo').modal();
+            }
+        });
     });
 
     

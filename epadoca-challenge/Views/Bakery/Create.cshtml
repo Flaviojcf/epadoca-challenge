@@ -1,0 +1,34 @@
+﻿@model BakeryModel
+
+<!--  New Bakery Modal -->
+<div class="containerCreate">
+
+    <form class="formModal" asp-controller="Bakery" asp-action="Add" method="post">
+        <div class="divForm mb-3">
+            <label for="name" class="form-label">Nome:</label>
+            <input type="text" asp-for="Name" class="form-control" id="name" placeholder="Nome da padaria">
+        </div>
+        <div class="divForm mb-3">
+            <label for="description" class="form-label">Descrição:</label>
+            <input type="text" asp-for="Description" class="form-control" id="description" placeholder="Descrição da padaria">
+        </div>
+        <div class="divForm mb-3">
+            <label for="state" class="form-label">Estado:</label>
+            <input type="text" asp-for="State" class="form-control" id="state" placeholder="Estado da padaria">
+        </div>
+        <div class="divForm mb-3">
+            <label for="city" class="form-label">Cidade:</label>
+            <input type="text" asp-for="City" class="form-control" id="city" placeholder="Cidade da padaria">
+        </div>
+        <div class="divForm mb-3">
+            <label for="street" class="form-label">Rua:</label>
+            <input type="text" asp-for="Street" class="form-control" id="street" placeholder="Rua da padaria">
+        </div>
+
+        <button type="submit" class="btnForm btn-primary">Cadastrar</button>
+    </form>
+
+</div>
+
+
+<!--/////////////////////////////////////////////////////////////////////-->
