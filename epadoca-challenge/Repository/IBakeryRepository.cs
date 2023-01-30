@@ -12,5 +12,11 @@ namespace epadoca_challenge.Repository
         List<BakeryModel> GetAll();
 
         List<BakeryModel> GetById(int bakeryId);
+
+        BakeryModel ListById(int id);
+
+        BakeryModel PatchBakery(BakeryModel bakery);
+
+        bool Delete(int id);
     }
 }

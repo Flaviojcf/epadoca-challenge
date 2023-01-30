@@ -22,3 +22,7 @@ $(document).ready(function () {
         $('#modalBakeryInfo').modal();
 });
 })
+
+$('.close-alert').click(function () {
+    $('.alert').hide('hide');
+})

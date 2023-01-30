@@ -3,14 +3,15 @@
 
 <div class="containerCreate">
 
-    <form class="formModal" asp-controller="Bakery" asp-action="Create" method="post">
+    <form class="formModal" asp-controller="Bakery" asp-action="PatchBakery" method="post">
+        <input type="hidden" asp-for="Id" />
+
         <div class="divForm mb-3">
             <label for="name" class="form-label">Nome:</label>
             <div class="formContainer">
                 <input type="text" asp-for="Name" class="form-control" id="name" placeholder="Nome da padaria">
                 @Html.ValidationMessageFor(x=>x.Name)
             </div>
-
         </div>
         <div class="divForm mb-3">
             <label for="description" class="form-label">Descrição:</label>
@@ -18,7 +19,6 @@
                 <input type="text" asp-for="Description" class="form-control" id="description" placeholder="Descrição da padaria">
                 @Html.ValidationMessageFor(x=>x.Description)
             </div>
-
         </div>
         <div class="divForm mb-3">
             <label for="state" class="form-label">Estado:</label>
@@ -26,7 +26,6 @@
                 <input type="text" asp-for="State" class="form-control" id="state" placeholder="Estado da padaria">
                 @Html.ValidationMessageFor(x=>x.State)
             </div>
-
         </div>
         <div class="divForm mb-3">
             <label for="city" class="form-label">Cidade:</label>
@@ -34,18 +33,16 @@
                 <input type="text" asp-for="City" class="form-control" id="city" placeholder="Cidade da padaria">
                 @Html.ValidationMessageFor(x=>x.City)
             </div>
-
         </div>
         <div class="divForm mb-3">
             <label for="street" class="form-label">Rua:</label>
-            <div class="formContainer">
+              <div class="formContainer">
                 <input type="text" asp-for="Street" class="form-control" id="street" placeholder="Rua da padaria">
                 @Html.ValidationMessageFor(x=>x.Street)
             </div>
-
         </div>
 
-        <button type="submit" class="btnForm btn-primary">Cadastrar</button>
+        <button type="submit" class="btnForm btn-primary">Editar</button>
     </form>
 
 </div>

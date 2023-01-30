@@ -110,6 +110,19 @@ body {
     cursor: pointer;
 }
 
+.field-validation-error {
+    color: red;
+}
+
+.close-alert {
+    position: absolute;
+    right: -10px;
+    top: -15px;
+    border-radius: 15px;
+    width: 30px;
+    height: 31px;
+}
+
 @media (max-width: 1024px) {
     .containerFooter {
         padding: 20px;

@@ -1,6 +1,7 @@
 ﻿using epadoca_challenge.Data;
 using epadoca_challenge.Models;
 using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 
@@ -21,6 +22,15 @@ namespace epadoca_challenge.Repository
             return bakery;
         }
 
+        public bool Delete(int id)
+        {
+            BakeryModel bakery = ListById(id);
+         _contextDb.Remove(bakery);
+         _contextDb.SaveChanges();
+            return true;
+        
+        }
+
         public List<BakeryModel> GetAll()
         {
             return _contextDb.Bakeries.ToList();
@@ -39,6 +49,26 @@ namespace epadoca_challenge.Repository
                 return bakery;
             }
             throw new System.Exception("Padaria já cadastrada");
+        }
+
+        public BakeryModel ListById(int id)
+        {
+          return _contextDb.Bakeries.FirstOrDefault(x=>x.Id == id);
+        }
+
+        public BakeryModel PatchBakery(BakeryModel bakery)
+        {
+            BakeryModel bakeryDb = ListById(bakery.Id);
+
+            bakeryDb.Name = bakery.Name;
+            bakeryDb.City = bakery.City;
+            bakeryDb.State = bakery.State;
+            bakeryDb.Street = bakery.Street;
+            bakeryDb.Description = bakery.Description;
+
+            _contextDb.Bakeries.Update(bakeryDb);
+            _contextDb.SaveChanges();
+            return bakeryDb;  
         }
     }
 }
