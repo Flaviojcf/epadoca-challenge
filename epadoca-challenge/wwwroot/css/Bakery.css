@@ -1,192 +1,195 @@
-﻿
-.Container {
-    display: flex;
-    min-height: 100vh !important;
-    flex-direction: column;
-    gap: 10px;
-    margin-bottom: 310px;
+﻿.Container {
+  display: flex;
+  min-height: 100vh !important;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 310px;
 }
 
-
 .containerTitle {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    gap: 50px;
-    text-align: center;
-    align-items: center;
-    margin: 20px;
+  gap: 50px;
+  text-align: center;
+  align-items: center;
+  margin: 20px;
 }
 
 .alert {
-    max-width: 250px;
-
+  max-width: 250px;
 }
 
 .closeAlert {
-    max-width: 30px
+  max-width: 30px;
 }
 
 .titleBakeryPage {
-    color: #ffad02;
+  color: #ffad02;
 }
-
 
 .bakeryContainer {
-    display: flex;
-    height: 100% !important;
-    justify-content: center;
-    flex-wrap: wrap;
-    padding: 40px;
-    gap: 25px;
+  display: flex;
+  height: 100% !important;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 40px;
+  gap: 25px;
 }
 
-
 .cardComponent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    background: yellow;
-    max-width: 280px;
-    min-height: 210px;
-    padding: 15px 10px;
-    border-radius: 25px;
-    border: 1px solid black;
+  display: flex;
+
+  flex-direction: column;
+  align-items: center;
+
+  text-align: center;
+  background: yellow;
+  width: 280px;
+  min-height: 210px;
+  padding: 15px 10px;
+
+  border-radius: 25px;
+  border: 1px solid black;
+
+  overflow: hidden;
+}
+
+.cardText {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  max-width: 220px;
 }
 
 .infoCard {
-    margin-top: auto;
-    cursor: pointer;
-    transition: all ease 0.2s;
+  margin-top: auto;
+  cursor: pointer;
+  transition: all ease 0.2s;
 }
 
-    .infoCard:hover {
-        opacity: 40%;
-    }
+.infoCard:hover {
+  opacity: 40%;
+}
 
 .modal-dialog {
-    align-self: center;
-    justify-self: center;
-    margin-top: 200px;
+  align-self: center;
+  justify-self: center;
+  margin-top: 200px;
 }
 
 .btn-close {
-    border-radius: 16px;
-    border: none;
-    padding: 10px;
-    background: yellow;
+  border-radius: 16px;
+  border: none;
+  padding: 10px;
+  background: yellow;
 }
 
-    .btn-close:hover {
-        opacity: 60%;
-        box-shadow: 10px 10px 34px -17px rgba(0,0,0,0.75);
-    }
+.btn-close:hover {
+  opacity: 60%;
+  box-shadow: 10px 10px 34px -17px rgba(0, 0, 0, 0.75);
+}
 
 .modal-content {
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    align-content: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-content: center;
 }
 
 .tableModal {
-    display: flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 .thead {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
 .tbodyModal {
-    display: flex;
-    flex-direction: column;
-    gap: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
 }
 
-
 .containerButton {
-    display: flex;
-    width: 100%;
-    align-content: center;
-    justify-content: center;
+  display: flex;
+  width: 100%;
+  align-content: center;
+  justify-content: center;
 }
 
 .btn {
-    width: 300px;
+  width: 300px;
 }
 
 .btn-primary {
-    margin-bottom: 25px;
-    width: 175px;
-    cursor: pointer;
+  margin-bottom: 25px;
+  width: 175px;
+  cursor: pointer;
 }
 
 .btn-danger {
-    width: 175px;
-
+  width: 175px;
 }
 
-    .btn:hover {
-        opacity: 60%;
-    }
+.btn:hover {
+  opacity: 60%;
+}
 
 .formModal {
-    display: flex;
-    flex-direction: column;
-    align-self: center;
-    align-content: center;
-    justify-content: center;
-    border: 1px solid black;
-    border-radius: 8px;
-    width: 100%;
-    max-width: 800px;
-    gap: 25px;
-    padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-self: center;
+  align-content: center;
+  justify-content: center;
+  border: 1px solid black;
+  border-radius: 8px;
+  width: 100%;
+  max-width: 800px;
+  gap: 25px;
+  padding: 30px;
 }
 
 .divForm {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 100%;
-
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
 }
 .formContainer {
-    display: flex;
-    flex-direction: column;
-    width: 70%;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
 }
 
 .form-control {
-    max-width: 380px;
-    border-radius: 8px;
+  max-width: 380px;
+  border-radius: 8px;
 }
 
 .btnForm {
-    align-self: center;
-    border: none;
-    height: 40px;
-    width: 260px;
-    border-radius: 8px;
+  align-self: center;
+  border: none;
+  height: 40px;
+  width: 260px;
+  border-radius: 8px;
 }
 
-
 .containerCreate {
-    display: flex;
-    flex-direction: column;
-    align-content: center;
-    justify-content: center;
-    padding: 20px;
-    margin-bottom: 300px;
-    margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  padding: 20px;
+  margin-bottom: 300px;
+  margin-top: 40px;
 }
 
 @media (max-width: 475px) {
-    .form-control {
-        width: 140px !important;
-    }
+  .form-control {
+    width: 140px !important;
+  }
 }
