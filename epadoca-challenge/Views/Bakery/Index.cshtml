@@ -2,6 +2,7 @@
 
 @{
     ViewData["Title"] = "Parceiros";
+    var username = ViewData["Username"] as string;
 }
 
 <!--  Bakery info Modal -->
@@ -19,7 +20,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </div>  
 </div>
 <!--/////////////////////////////////////////////////////////////////////-->
 
@@ -30,7 +31,7 @@
 <div class="Container">
 
 
-   
+
 
 
     <div class="containerTitle">
@@ -41,18 +42,18 @@
         {
            <h1 class="titleBakeryPage">Seja nosso primeiro parceiro</h1>
         }
-      @if (TempData["MensagemSucesso"] != null)
+        @if (TempData["SuccessMesage"] != null)
     {
         <div class="alert alert-success" role="alert">
             <button type="button" class="closeAlert btn-danger btn-sm close-alert" arial-label="Close">X</button>
-            @TempData["MensagemSucesso"]
+                @TempData["SuccessMesage"]
         </div>
     }
-        @if (TempData["MensagemErro"] != null)
+        @if (TempData["ErrorMesage"] != null)
         {
             <div class="alert alert-danger" role="alert">
                 <button type="button" class="closeAlert btn-danger btn-sm close-alert" arial-label="Close">X</button>
-                @TempData["MensagemErro"]
+                @TempData["ErrorMesage"]
             </div>
         }
     </div>

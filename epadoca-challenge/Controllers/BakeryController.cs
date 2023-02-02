@@ -1,7 +1,9 @@
 ﻿using epadoca_challenge.Models;
 using epadoca_challenge.Repository;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System.Collections.Generic;
+using System.Diagnostics.Eventing.Reader;
 
 namespace epadoca_challenge.Controllers
 {
@@ -16,12 +18,14 @@ namespace epadoca_challenge.Controllers
         public IActionResult Index()
         {
             List<BakeryModel> bakery = _bakeryRepository.GetAll();
+     
             return View(bakery);
         }
 
 
         public IActionResult Create()
         {
+           
             return View();
         } 
         
@@ -41,16 +45,17 @@ namespace epadoca_challenge.Controllers
         [HttpPost]
         public IActionResult Create(BakeryModel bakery)
         {
-            if(ModelState.IsValid) {
+            if (ModelState.IsValid) {
                 BakeryModel bakeryDb = _bakeryRepository.GetByName(bakery);
                 if (bakeryDb != null)
                 {
                     _bakeryRepository.Add(bakeryDb);
-                    TempData["MensagemSucesso"] = "Nova parceria realizada!";
+                    TempData["SuccessMesage"] = "Nova parceria realizada!";
                     return RedirectToAction("Index");
                 }
-                TempData["MensagemErro"] = "Padaria já cadastrada";
+                TempData["ErrorMesage"] = "Padaria já cadastrada";
                 return RedirectToAction("Index");
+
             }
 
             return View(bakery);
@@ -67,7 +72,7 @@ namespace epadoca_challenge.Controllers
             if (ModelState.IsValid)
             {
                 _bakeryRepository.PatchBakery(bakery);
-                TempData["MensagemSucesso"] = "Informações alteradas com sucesso";
+                TempData["SuccessMesage"] = "Informações alteradas com sucesso";
                 return RedirectToAction("Index");
             }
             return View("Edit", bakery);
