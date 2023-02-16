@@ -93,7 +93,7 @@
     ```
 4. In Visual Studio
     ```sh
-    Open the package manager console and write: "Updata-Database -Context BakeryDbContext"
+    Open the package manager console and write: "Update-Database -Context BakeryDbContext"
     ```
 5. Run the project
      ```sh
